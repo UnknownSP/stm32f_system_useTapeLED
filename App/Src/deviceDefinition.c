@@ -27,7 +27,7 @@ DD_MDHand_t g_md_h[DD_NUM_OF_MD] = {
 #if DD_NUM_OF_LD
 /*LD Definition*/
 DD_LDHand_t g_ld_h[DD_NUM_OF_LD] = {
-  { .add  = 0x10, /* address */
+  { .add  = 0x70, /* address */
     .mode = {0,0,0,0,0,0,0,0}, /* mode */
   },
 };

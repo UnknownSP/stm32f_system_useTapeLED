@@ -24,6 +24,14 @@ DD_MDHand_t g_md_h[DD_NUM_OF_MD] = {
   },
 };
 #endif
+#if DD_NUM_OF_LD
+/*LD Definition*/
+DD_LDHand_t g_ld_h[DD_NUM_OF_LD] = {
+  { .add  = 0x10, /* address */
+    .mode = {0,0,0,0,0,0,0,0}, /* mode */
+  },
+};
+#endif
 #if DD_NUM_OF_AB
 /*AB Definition*/
 DD_ABHand_t g_ab_h[DD_NUM_OF_AB] = {

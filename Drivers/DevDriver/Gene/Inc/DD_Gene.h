@@ -13,6 +13,7 @@
 #define __DD_GENE_H
 
 #include "DD_MD.h"
+#include "DD_LD.h"
 #include "DD_AB.h"
 #include "DD_SS.h"
 #include "DD_SV.h"
@@ -22,6 +23,9 @@
 
 #if DD_NUM_OF_MD
 extern DD_MDHand_t g_md_h[DD_NUM_OF_MD];
+#endif
+#if DD_NUM_OF_LD
+extern DD_LDHand_t g_ld_h[DD_NUM_OF_LD];
 #endif
 #if DD_NUM_OF_AB
 extern DD_ABHand_t g_ab_h[DD_NUM_OF_AB];

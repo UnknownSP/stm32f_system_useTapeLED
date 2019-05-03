@@ -15,6 +15,7 @@
 #include "MW_I2C.h"
 #include "DD_Gene.h"
 #include "DD_MD.h"
+#include "DD_LD.h"
 #include "DD_AB.h"
 #include "DD_SS.h"
 #include "DD_ENCODER.h"
@@ -40,6 +41,14 @@ int DD_doTasks(void){
 #if DD_NUM_OF_MD
   for( i = 0; i < DD_NUM_OF_MD; i++ ){
     ret = DD_send2MD(&g_md_h[i]);
+    if( ret ){
+      return ret;
+    }
+  }
+#endif
+#if DD_NUM_OF_LD
+  for( i = 0; i < DD_NUM_OF_LD; i++ ){
+    ret = DD_send2LD(&g_ld_h[i]);
     if( ret ){
       return ret;
     }
@@ -89,6 +98,11 @@ void DD_print(void){
 #if DD_NUM_OF_MD
   for( i = 0; i < DD_NUM_OF_MD; i++ ){
     DD_MDHandPrint(&g_md_h[i]);
+  }
+#endif
+#if DD_NUM_OF_LD
+  for( i = 0; i < DD_NUM_OF_LD; i++ ){
+    DD_LDHandPrint(&g_ld_h[i]);
   }
 #endif
 #if DD_NUM_OF_AB

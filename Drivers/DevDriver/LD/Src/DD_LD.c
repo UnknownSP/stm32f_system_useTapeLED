@@ -34,7 +34,7 @@ int DD_send2LD(DD_LDHand_t *dld){
 void DD_LDHandPrint(DD_LDHand_t *dld){
   MW_printf("LD(%02x):\n", dld->add);
   for(int i=0;i<8;i++){
-    MW_printf("   [%d],[%16s]\n",i+1,blink_mode[(int)(dld->mode)]);
+    MW_printf("   [%d],[%16s]\n",i+1,blink_mode[(int)(dld->mode[i])]);
   }
 }
 
